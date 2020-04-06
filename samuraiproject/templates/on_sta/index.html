@@ -1,0 +1,13 @@
+{% extends 'on_sta/base.html' %}
+
+{% block content %}
+<h1>{{ block_title }}</h1>
+
+<p><a href="{% url 'on_sta:login' %}" class="btn btn-success">ログイン画面はこちら</a></p>
+<p><a href="{% url 'on_sta:account' %}">新規会員登録はこちら</a></p>
+<p><a href="{% url 'on_sta:contact' %}">お問い合わせはこちら</a></p>
+<p><a href="{% url 'on_sta:help' %}">ヘルプ</a></p>
+<p><a href="{% url 'on_sta:policy' %}">利用規約</a></p>
+<p><a href="{% url 'on_sta:disclaimer' %}">免責事項</a></p>
+
+{% endblock %}

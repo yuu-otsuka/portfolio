@@ -1,0 +1,10 @@
+{% extends 'on_sta/base.html' %}
+
+{% block content %}
+<h1>{{ block_title }}</h1>
+<h3>部屋名</h3>
+<h3>タグ</h3>
+<h3>人数</h3>
+<h3>部屋のレイアウト</h3>
+<p><a href="{% url 'on_sta:study_room' %}" class="btn btn-success">作成</a></p>
+{% endblock %}
