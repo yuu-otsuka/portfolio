@@ -25,8 +25,5 @@ urlpatterns = [
     path('study_plan/',views.study_plan, name='study_plan'),
     path('study_room/',views.study_room, name='study_room'),
     path('twitter/',views.twitter, name='twitter'),
-    path('gallery/',views.gallery, name='gallery'),
-    path('top/pages/widgets/',views.widgets, name='widgets'),
-    path('calendar/',views.calendar, name='calendar'),
 
 ]

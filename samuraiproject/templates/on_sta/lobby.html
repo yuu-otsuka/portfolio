@@ -3,4 +3,32 @@
 {% block content %}
 <h1>{{ block_title }}</h1>
 <p><a href="{% url 'on_sta:create_room' %}" class="btn btn-success" >部屋を作成</a></p>
+
+<h2>部屋一覧</h2>
+
+<table>
+    <tr>
+        <th>部屋ID</th>
+        <th>部屋名</th>
+        <th>人数</th>
+        <th>開始時間</th>
+    </tr>
+
+
+{% for room in data %}
+
+    <tr>
+        <td>{{ room.room_id }}</td>
+        <td>{{ room.room_name }}</td>
+        <td>{{ room.pepple }}</td>
+        <td>{{ room.start_time }}</td>
+        <td>{% if room.room_id >= 0 %}<p><a href = "{% url 'on_sta:study_room' %}" 
+            class="btn btn-success" >入室</a></p>{% endif %}</td>
+    </tr>
+
+
+{% endfor %}
+
+
+</table>
 {% endblock %}

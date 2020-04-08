@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from .models import Room
 
 def calendar(request):
     return render(request, 'on_sta/calendar.html')
@@ -66,8 +67,10 @@ def home(request):
 
 def lobby(request):
 
+    data = Room.objects.all()
     params = {
-        'block_title':'ロビー'
+        'block_title':'ロビー',
+        'data':data, 
     }
 
     return render(request, 'on_sta/lobby.html',params)

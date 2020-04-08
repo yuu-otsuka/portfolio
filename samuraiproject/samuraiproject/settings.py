@@ -132,3 +132,7 @@ LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/on_sta/top'
 
 LOGOUT_REDIRECT_URL='/login'
+
+#アップロードした画像の保存先
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
